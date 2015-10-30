@@ -391,8 +391,9 @@ alert("Load Error: " + errorMsg);
                 <section>
                     <h2>浏览器端API - 更多API</h2>
                     <p></p>
-                    <p> 详细请看 <a href="http://developer-autodesk.github.io/LmvDbg/"> http://developer-autodesk.github.io/LmvDbg/</a></p>
+                    
                     <p>漫游控制、显示/隐藏、相机视点控制、爆炸显示、屏幕截图、用户事件响应、自定义界面...</p>
+                    <p> 详细请看 <a href="http://developer-autodesk.github.io/LmvDbg/"> http://developer-autodesk.github.io/LmvDbg/</a></p>
                 </section>
             </section>
             <section data-transition="slide">
@@ -506,6 +507,15 @@ alert("Load Error: " + errorMsg);
         //  c: current slide index (flattened)
         //  t: total number of slides (flattened)
         Reveal.configure({ slideNumber: 'c / t' });
+
+        Reveal.configure({
+          keyboard: {
+            40: 'next', // go to the next slide when the ENTER key is pressed
+            38: 'prev',
+            //27: function() {}, // do something custom when ESC is pressed
+            32: null // don't do anything when SPACE is pressed (i.e. disable a reveal.js default binding)
+          }
+        });
     </script>
 </body>
 </html>
